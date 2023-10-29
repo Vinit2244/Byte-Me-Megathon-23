@@ -16,8 +16,8 @@ def home():
 def chat():
     if request.method == 'POST':
         user_input = request.form['user_input']
-        response = f"You said: {user_input}"
-        print(response)
+        print(user_input)
+
         return render_template('homepage.html', user_input=user_input)
     return render_template('homepage.html')
 
